@@ -1,5 +1,5 @@
 from flask import Flask, jsonify
-from flask_restful import Api
+from flask_restx import Api
 from flask_jwt_extended import JWTManager
 from blacklist import BLACKLIST
 import api.resource_api as resource_api
@@ -37,4 +37,4 @@ if __name__ == '__main__':
     # from sql_alchemy import banco
     from sql_settings import mysql
     mysql.init_app(app)
-    app.run(debug=True)
+    app.run(debug=True, port=8957)

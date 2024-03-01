@@ -1,6 +1,6 @@
 
 from api.entity.person_entity import PersonEntity
-from flask_restful import Resource, reqparse
+from flask_restx import Resource, reqparse
 from api.db.person_scripts import APOSTA_HISTORY, APOSTA_INSERT
 from sql_settings import mysql
 
