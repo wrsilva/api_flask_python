@@ -1,7 +1,7 @@
-# Aposta
+# Person
 
-APOSTA_INSERT = "INSERT INTO person \
-                  (`last_name`, `fist_name`, `age`)\
+PERSON_INSERT = "INSERT INTO person \
+                  (`age`, `fist_name`, `last_name`)\
                         VALUES (%s,%s, %s);"
 
-APOSTA_HISTORY = "SELECT * FROM db_estudo.person"
+PERSON_HISTORY = "SELECT * FROM db_estudo.person"

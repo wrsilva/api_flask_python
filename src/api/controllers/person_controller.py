@@ -1,44 +1,49 @@
 
-from api.entity.person_entity import PersonEntity
-from flask_restx import Resource, reqparse
-from api.db.person_scripts import APOSTA_HISTORY, APOSTA_INSERT
+from api.entity.person_entity import PersonEntity, person
+from flask_restx import Resource
+from api.db.person_scripts import PERSON_INSERT, PERSON_HISTORY
 from sql_settings import mysql
+from api.server.instance import server
+
+app,api = server.app, server.api
 
 
+@api.route('/person')
 class PersonController(Resource):
 
-    def post(self):
+    @api.expect(person,valitade = True)
+    @api.marshal_list_with(person)
+    def post(self,):
         try:
             conn = mysql.connect()
             cursor = conn.cursor()
 
-            aposta_params = reqparse.RequestParser()
-            aposta_params.add_argument('fist_name', type=str)
-            aposta_params.add_argument('last_name', type=str)
-            aposta_params.add_argument('age', type=int, required=True)
-
-            aposta_args = aposta_params.parse_args()
-            aposta = PersonEntity(**aposta_args)
+            response = api.payload
+            
+            person = PersonEntity(**response)
 
             params = (
-                str(aposta.age),
-                str(aposta.fist_name),
-                str(aposta.last_name)
+                str(person.age),
+                str(person.fist_name),
+                str(person.last_name)
             )
-            cursor.execute(APOSTA_INSERT, params)
+            print('params ***')
+            print(params)
+            cursor.execute(PERSON_INSERT, params)
             conn.commit()
 
-            return PersonEntity.json(aposta)
+            return PersonEntity.json(person)
 
         except Exception as e:
             return {"mesage": "{}".format(e)}, 404
 
-    def get(self):
+    @api.marshal_list_with(person)
+    def get(self,):
         try:
             conn = mysql.connect()
             cursor = conn.cursor()
 
-            cursor.execute(APOSTA_HISTORY)
+            cursor.execute(PERSON_HISTORY)
 
             resultado = cursor.fetchall()
             mercados = []
