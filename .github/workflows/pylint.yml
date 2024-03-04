@@ -19,5 +19,4 @@ jobs:
           pip install -r src/requirements.txt
       - name: Analysing the code with pylint
         run: |
-          ignore-patterns=sql_settings.py
           pylint $(git ls-files '*.py')
