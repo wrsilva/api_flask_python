@@ -1,13 +1,27 @@
 # API Pessoa / API Person
 
-   - Este projeto, chamado "API Pessoa", é uma API em Python focada em lidar com operações CRUD (INSERT, UPDATE, DELETE) para gerenciar dados relacionados a pessoas.
-   - This project, named "API Pessoa," is a Python-based API that focuses on handling CRUD operations (INSERT, UPDATE, DELETE) for managing person-related data.
+   - Este projeto, chamado "API Pessoa", é uma API em Python desenvolvida utilizando Flask, Swagger e MySQL. Ela foca em lidar com operações CRUD (INSERT, UPDATE, DELETE) para gerenciar dados relacionados a pessoas.
+   - This project, named "API Pessoa," is a Python-based API developed using Flask, Swagger, and MySQL. It focuses on handling CRUD operations (INSERT, UPDATE, DELETE) for managing person-related data.
 
 ## Funcionalidades Principais / Key Features
 
    - **Operações INSERT, UPDATE, DELETE, GET**: A API permite o gerenciamento de dados relacionados a pessoas com essas funcionalidades principais.
    - **INSERT, UPDATE, DELETE operations**: The API allows for the management of person-related data with these key functionalities.
 
+## Tecnologias Utilizadas
+
+   - **Python**:
+     - A linguagem de programação principal utilizada neste projeto.
+     - The primary programming language used in this project.
+   - **Flask**:
+      - Um framework web leve para Python.
+      - A lightweight web framework for Python.
+   - **Swagger**:
+      - Uma ferramenta para documentação e teste de APIs.
+      - A tool for API documentation and testing.
+   - **MySQL**:
+      - Sistema de gerenciamento de banco de dados relacional.
+      - Relational database management system.
 
 ## Variáveis de Ambiente / Environment Variables
 
