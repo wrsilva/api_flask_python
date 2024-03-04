@@ -17,8 +17,8 @@ The environment variables are configured in the `server/instance.py` file.
 ## Configuração / Setup
 
 1. **Criar Ambiente Virtual / Create Virtual Environment**:
-   -Execute o comando `python -m venv venv` para criar um ambiente virtual.
-   -Execute the command `python -m venv venv` to create a virtual environment.
+   - Execute o comando `python -m venv venv` para criar um ambiente virtual.
+   - Execute the command `python -m venv venv` to create a virtual environment.
 3. **Ativar Ambiente Virtual**: Ative o ambiente virtual com o comando `source venv/bin/activate`.
 4. **Instalar Dependências**: Execute `pip install -r src/requirements.txt` para instalar as dependências necessárias.
 5. **Iniciar o Servidor**: Execute `python3 src/app_dev.py` para iniciar o servidor.
