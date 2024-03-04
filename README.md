@@ -8,7 +8,7 @@
    - **Operações INSERT, UPDATE, DELETE, GET**: A API permite o gerenciamento de dados relacionados a pessoas com essas funcionalidades principais.
    - **INSERT, UPDATE, DELETE operations**: The API allows for the management of person-related data with these key functionalities.
 
-## Tecnologias Utilizadas
+## Tecnologias Utilizadas / Technologies Used
 
    - **Python**:
      - A linguagem de programação principal utilizada neste projeto.
