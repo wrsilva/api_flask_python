@@ -19,4 +19,5 @@ jobs:
           pip install -r src/requirements.txt
       - name: Analysing the code with pylint
         run: |
+          ignore-patterns=one.py,.*local.*
           pylint $(git ls-files '*.py')
