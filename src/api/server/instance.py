@@ -12,7 +12,7 @@ class Server():
             version='1.0',
             title='Sample Person API',
             description='A simple book API',
-            doc='/docs'
+            doc='/'
         )
         self.app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
         self.app.config['JWT_SECRET_KEY'] = 'DontTellAnyone'
